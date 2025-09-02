@@ -1,0 +1,102 @@
+# Compiled Object files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+
+# Build directories
+Debug/
+Release/
+x64/
+x86/
+bin/
+build/
+out/
+
+# Visual Studio specific
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.sdf
+*.opensdf
+*.db
+*.ipch
+*.aps
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.meta
+*.obj
+*.tlog
+*.log
+*.lastbuildstate
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Temporäre Dateien
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Backup Dateien
+*.bak
+*.orig
+
+# Persönliche/Sensitive Daten
+config.ini
+settings.json
+*.key
+*.secret
+passwords.txt
+credentials.*
+
+# Test Outputs
+test_results/
+*.test
+
+# Package Managers
+vcpkg_installed/
+packages/
+node_modules/
+
+# Dokumentation Build
+docs/build/
+*.pdf
+*.docx
+
+# Logs
+*.log
+logs/
+
+# IDE specific settings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+packages.config
