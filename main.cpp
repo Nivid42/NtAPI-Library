@@ -1,21 +1,20 @@
+#include "NtOpenProcess/includes/NtOP.h"
 #include "NtQuerySystemInformation/includes/NtQSI.h"
 #include <iostream>
 
 int main() {
-    // So benutzen:
-    std::wstring target = L"Discord.exe";
-
-    //NtQSI Process ID
-    DWORD pid = NtQSI::FindProcessIdByName(target);
+    // Searches for PID to OpenProcess
+    DWORD pid = NtQSI::FindProcessIdByName(L"target.exe");
     if (pid != 0) {
-        std::cout << pid << std::endl;
+        // Getting handle from Process
+        HANDLE h = NtOP::OpenProcessForWrite(pid);
+        // Validate handle
+        if (NtOP::IsValidProcessHandle(h)) {
+            // Ready for memory operations
+
+            // Close Handle
+            NtOP::CloseProcessHandle(h);
+        }
     }
-    else {
-        std::cout << "Prozess nicht gefunden." << std::endl;
-    }
-
-    //NtOP
-
-
     return 0;
 }
